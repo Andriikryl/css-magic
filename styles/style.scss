@@ -1,0 +1,10 @@
+
+$rs: 20em;
+
+div{
+    display: inline-block;
+    padding: $rs;
+    box-shadow: 0 0 0 4px tomato;
+    background: 
+        conic-gradient(from 150deg at 50% 0, tomato 60deg, transparent 0%);
+}
