@@ -5,10 +5,14 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
     background-color: #ffe8d6;
 }
 
+
+//=====================one
 
 .box__one{
     width: 500px;
@@ -17,6 +21,11 @@ body{
     repeating-conic-gradient(#f008 10% 40%, #1007 10% 60%) 0 0/ #{$s $s},
     linear-gradient( tomato, #100) 0 0 /1% #{.5*$s};
 }
+
+//=====================one
+
+
+//=====================two
 
 .box__two{
     width: 500px;
@@ -28,3 +37,48 @@ body{
         filter: contrast(19) brightness(2);
 }
 
+//=====================two
+
+
+
+
+//=====================three
+
+
+$gs:2em;
+$c: #90e0ef;
+$ms:2*$gs;
+
+.box__three{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    div{
+        display: grid;
+        place-self: center;
+        &::before, &::after{
+            --patern: 
+            linear-gradient(90deg, #ffd60a, #{$c},  #ffd60a);
+            grid-area: 1/1;
+            padding: 25vmin;
+            content: "";
+            box-shadow: 0 0 0 4px;
+            background: 
+            linear-gradient(rgba($c, .47), #000),
+            linear-gradient($c, rgba(#000, .47) ),
+            var(--patern) 0 0/ #{$gs $gs};
+            background-blend-mode: screen, multiply;
+            filter: contrast(35) contrast(.65);
+        }
+
+        &::after{
+            --patern:
+            radial-gradient(#{$c}, #000 75% );
+            --mask: linear-gradient(red 30%, transparent 0)
+            0 0 / 100% #{$ms};
+            mask: var(--mask);
+        }
+    }
+}
+
+//=====================three

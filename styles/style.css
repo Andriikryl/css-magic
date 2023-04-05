@@ -2,6 +2,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 40px;
   background-color: #ffe8d6;
 }
@@ -18,4 +20,33 @@ body {
   background: conic-gradient(from 180deg, red, rgba(42, 24, 155, 0.2), red), repeating-radial-gradient(red, rgba(38, 16, 150, 0.5), red 5%);
   background-blend-mode: multiply;
   filter: contrast(19) brightness(2);
+}
+
+.box__three {
+  width: 500px;
+  height: 500px;
+  display: grid;
+}
+.box__three div {
+  display: grid;
+  place-self: center;
+}
+.box__three div::before, .box__three div::after {
+  --patern:
+  linear-gradient(90deg, #ffd60a, #90e0ef, #ffd60a);
+  grid-area: 1/1;
+  padding: 25vmin;
+  content: "";
+  box-shadow: 0 0 0 4px;
+  background: linear-gradient(rgba(144, 224, 239, 0.47), #000), linear-gradient(#90e0ef, rgba(0, 0, 0, 0.47)), var(--patern) 0 0/2em 2em;
+  background-blend-mode: screen, multiply;
+  filter: contrast(35) contrast(0.65);
+}
+.box__three div::after {
+  --patern:
+  radial-gradient(#90e0ef, #000 75% );
+  --mask: linear-gradient(red 30%, transparent 0)
+  0 0 / 100% 4em;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }/*# sourceMappingURL=style.css.map */
