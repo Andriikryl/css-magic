@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -8,4 +9,12 @@ body {
   width: 500px;
   height: 500px;
   background: repeating-conic-gradient(rgba(255, 0, 0, 0.5333333333) 10% 40%, rgba(17, 0, 0, 0.4666666667) 10% 60%) 0 0/8em 8em, linear-gradient(tomato, #100) 0 0/1% 4em;
+}
+
+.box__two {
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(from 180deg, red, rgba(42, 24, 155, 0.2), red), repeating-radial-gradient(red, rgba(38, 16, 150, 0.5), red 5%);
+  background-blend-mode: multiply;
+  filter: contrast(19) brightness(2);
 }/*# sourceMappingURL=style.css.map */

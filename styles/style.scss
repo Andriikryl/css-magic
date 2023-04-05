@@ -1,8 +1,10 @@
 $s: 8em;
+$d: 30em;
 
 body{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -13,4 +15,14 @@ body{
     background:
     repeating-conic-gradient(#f008 10% 40%, #1007 10% 60%) 0 0/ #{$s $s},
     linear-gradient( tomato, #100) 0 0 /1% #{.5*$s};
+}
+
+.box__two{
+    width: 500px;
+    height: 500px;
+    background: 
+        conic-gradient(from 180deg, red, rgba(#2a189b, .2), red),
+        repeating-radial-gradient(red, rgba(#261096, .5) , red 5%);
+        background-blend-mode: multiply;
+        filter: contrast(19) brightness(2);
 }
