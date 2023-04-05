@@ -1,6 +1,11 @@
-div {
-  display: inline-block;
-  padding: 20em;
-  box-shadow: 0 0 0 4px tomato;
-  background: conic-gradient(from 150deg at 50% 0, tomato 60deg, transparent 0%);
+body {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.box__one {
+  width: 500px;
+  height: 500px;
+  background: repeating-conic-gradient(rgba(255, 0, 0, 0.5333333333) 10% 40%, rgba(17, 0, 0, 0.4666666667) 10% 60%) 0 0/8em 8em, linear-gradient(tomato, #100) 0 0/1% 4em;
 }/*# sourceMappingURL=style.css.map */
