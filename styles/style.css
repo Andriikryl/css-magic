@@ -3,6 +3,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  background-color: #ffe8d6;
 }
 
 .box__one {
